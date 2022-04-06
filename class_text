@@ -1,5 +1,8 @@
 https://gist.githubusercontent.com/hambster/c517f88992fa2f345a2462fda3693eb3/raw/db015178b20a8cb704052e4a1371d2dee7f65d5a/gistfile1.txt
 
-#gcloud builds submit --tag asia-east1-docker.pkg.dev/gunr19prj0005isb-extl/guae19afr0001isb/demo-sandbox:01 --gcs-source-staging-dir="gs://guae19bkt0002isb-cbu/staging" --gcs-log-dir="gs://guae19bkt0002isb-cbu/logs" .
-#cloud-run example
-#gcloud run deploy demo-sandbox --image=asia-east1-docker.pkg.dev/gunr19prj0005isb-extl/guae19afr0001isb/demo-sandbox:01 --port=8080 --platform=managed --service-account="gunr19sac0005isb-run@gunr19prj0005isb-extl.iam.gserviceaccount.com" --vpc-connector=projects/gpnr19prj0009fde-extl/locations/asia-east1/connectors/guae19vac0001fde-prvt-pga --ingress=internal-and-cloud-load-balancing
+# sandbox2.0 cli
+gcloud builds submit --tag asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:01 --gcs-source-staging-dir="gs://gpae19bkt0001isb-cbu-log/staging" --gcs-log-dir="gs://gpae19bkt0001isb-cbu-log/logs" .
+gcloud artifacts docker images list asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb --include-tags
+gcloud run deploy demo-sandbox --image=asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:01 --port=8080 --platform=managed --service-account="gpnr19sac0004isb-run@gpnr19prj0015isb-extl.iam.gserviceaccount.com"  --ingress=internal-and-cloud-load-balancing --allow-unauthenticated --region=asia-east1
+
+2.0不需要加上也可以work --vpc-connector=projects/gpnr19prj0009fde-extl/locations/asia-east1/connectors/guae19vac0001fde-prvt-pga
