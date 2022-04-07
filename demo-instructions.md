@@ -8,7 +8,7 @@ npm start
 # step 2
 cd ~/monolith-to-microservices/monolith && \  
 gcloud builds submit --tag asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:01 --gcs-source-staging-dir="gs://gpae19bkt0001isb-cbu-log/demo-staging" --gcs-log-dir="gs://gpae19bkt0001isb-cbu-log/demo-logs" . && \
-gcloud artifacts docker images list asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb --include-tag | grep  demo-sandbox
+gcloud artifacts docker images list asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb --include-tags | grep  demo-sandbox
 
 # step 3
 gcloud run deploy demo-sandbox \
