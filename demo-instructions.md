@@ -54,10 +54,15 @@ gcloud run deploy demo-sandbox \
 --image="asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:02" \
 --port=8080 \
 --platform=managed \
---service-account="gpnr19sac0004isb-run@gpnr19prj0015isb-extl.iam.gserviceaccount.com"\
+--service-account="gpnr19sac0004isb-run@gpnr19prj0015isb-extl.iam.gserviceaccount.com" \
 --ingress=internal-and-cloud-load-balancing \
 --allow-unauthenticated \
 --region=asia-east1
+```
+
+# step 8
+```
+gcloud run services delete demo-sandbox --region=asia-east1
 ```
 
 
