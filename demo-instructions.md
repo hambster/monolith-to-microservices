@@ -46,7 +46,10 @@ cd ~/monolith-to-microservices && \
 gcloud builds submit --tag asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:02 \
 --gcs-source-staging-dir="gs://gpae19bkt0001isb-cbu-log/demo-staging" \
 --gcs-log-dir="gs://gpae19bkt0001isb-cbu-log/demo-logs" .
+```
+
 # step 7
+```
 gcloud run deploy demo-sandbox \
 --image="asia-east1-docker.pkg.dev/gpnr19prj0015isb-extl/gpae19afr0001isb/demo-sandbox:02" \
 --port=8080 \
