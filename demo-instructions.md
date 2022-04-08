@@ -33,7 +33,7 @@ gcloud run deploy demo-sandbox \
 ## step 4
 ```
 cd ~/monolith-to-microservices && \
-vim monolith/react-app/src/pages/Home/index.js
+vim react-app/src/pages/Home/index.js
 ```
 
 ## step 5
